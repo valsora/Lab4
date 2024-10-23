@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -14,7 +15,8 @@ public class CopyFileContent {
             }
             fileReader.close();
             fileWriter.close();
-
+        } catch (FileNotFoundException e) {
+            System.out.println(e.toString());
         } catch (IOException e) {
             System.out.println(e.toString());
         }
