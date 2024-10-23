@@ -5,9 +5,11 @@ import java.io.IOException;
 
 public class CopyFileContent {
     public static void main(String[] args) {
+        FileReader fileReader;
+        FileWriter fileWriter;
         try {
-            FileReader fileReader = new FileReader("from.txt");
-            FileWriter fileWriter = new FileWriter("to.txt");
+            fileReader = new FileReader("from.txt");
+            fileWriter = new FileWriter("to.txt");
             int i = fileReader.read();
             while (i != -1) {
                 fileWriter.write(i);
