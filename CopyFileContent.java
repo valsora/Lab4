@@ -17,8 +17,6 @@ public class CopyFileContent {
             }
             fileReader.close();
             fileWriter.close();
-        } catch (FileNotFoundException e) {
-            System.out.println(e.toString());
         } catch (IOException e) {
             System.out.println(e.toString());
         }
