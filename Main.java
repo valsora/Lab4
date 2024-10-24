@@ -14,13 +14,13 @@ public class Main {
             }
         } catch (CustomInputMismatchException e) {
             System.out.println(e.toString());
-            exeptionLogger(e);
+            exceptionLogger(e);
             number = 0;
         }
         scan.close();
     }
 
-    public static void exeptionLogger(Exception exception) {
+    public static void exceptionLogger(Exception exception) {
         try {
             FileWriter fw = new FileWriter("exeptionsLog.txt", true);
             String eString = exception.toString() + "\n";
